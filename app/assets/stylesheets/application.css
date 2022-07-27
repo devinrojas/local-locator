@@ -1,0 +1,68 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+ .body {
+    background-color: #4c4c4c;
+    color: #d1d1d1;
+ }
+
+ .top-bar{  
+    background-color: #171717;
+    height: 75px;
+ }
+
+ .home-link{
+    font-size: 30px;
+ }
+
+ .about-us, .search, .state, .game, .date{
+    text-align: center;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034);
+    height: 500px;
+    margin: 100px auto;
+    background: #636363;
+    border: solid 1px #dbdbdb;
+  }
+
+  .about-us{
+    width: 1000px;
+  }
+
+  .search{
+    height: 300px;
+    border-top: solid 4px #dbdbdb;
+    border-bottom: solid 4px #dbdbdb;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #171717;
+  }
+
+  .container{
+    position: relative;
+  }
+
+  .state, .game, .date{
+    width: 175px;
+    height: 175px;
+    float: left;
+    margin: 10px auto;
+  }
+
+
+
