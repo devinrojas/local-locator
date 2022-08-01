@@ -37,11 +37,18 @@
     height: 500px;
     margin: 100px auto;
     background: #636363;
-    border: solid 1px #dbdbdb;
+    border: solid 3px #dbdbdb;
   }
 
   .about-us{
     width: 1000px;
+    background-image: url("evo.jpg");
+    background-size: cover;
+  }
+
+  .about-us-text{
+    margin-top: 150px;
+    backdrop-filter: blur(3px);
   }
 
   .search{
@@ -54,15 +61,47 @@
   }
 
   .container{
-    position: relative;
+    display: inline-block;
   }
 
   .state, .game, .date{
     width: 175px;
     height: 175px;
     float: left;
-    margin: 10px auto;
+    margin: 20px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); 
   }
+
+  .search-text{
+    margin-top: 87px;
+    backdrop-filter: blur(3px);
+  }
+
+  .game{
+    background-image: url("game.jpg");
+    background-size: cover;
+  }
+  
+  .state{
+    background-image: url("state.jpg");
+    background-size: cover;
+  }
+  .date{
+    background-image: url("date.jpg");
+    background-size: cover;
+  }
+
+  .game:hover, .state:hover, .date:hover
+    {
+      filter: none;
+      -webkit-filter: grayscale(0);
+      backdrop-filter: blur(0.5px);
+      filter: blur(0.5px);
+      border: solid 5px #85c7f2;
+  }
+  
+  
 
 
 
