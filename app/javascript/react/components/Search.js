@@ -14,8 +14,8 @@ const Search = () => {
               <p className='search-text'>G A M E</p>
             </div>
 
-            <div className='date'>
-              <p className='search-text'>D A T E</p>
+            <div className='day'>
+              <p className='search-text'>D A Y</p>
             </div>
             </div>
         </div>

@@ -17,12 +17,12 @@
  */
 
  .body {
-    background-color: #4c4c4c;
+    background-color: #151515;
     color: #d1d1d1;
  }
 
  .top-bar{  
-    background-color: #171717;
+    background-color: #000000;
     height: 75px;
  }
 
@@ -30,7 +30,7 @@
     font-size: 30px;
  }
 
- .about-us, .search, .state, .game, .date{
+ .about-us, .search, .state, .game, .day{
     text-align: center;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034);
@@ -64,7 +64,7 @@
     display: inline-block;
   }
 
-  .state, .game, .date{
+  .state, .game, .day{
     width: 175px;
     height: 175px;
     float: left;
@@ -87,17 +87,16 @@
     background-image: url("state.jpg");
     background-size: cover;
   }
-  .date{
+  .day{
     background-image: url("date.jpg");
     background-size: cover;
   }
 
-  .game:hover, .state:hover, .date:hover
+  .game:hover, .state:hover, .day:hover
     {
       filter: none;
       -webkit-filter: grayscale(0);
       backdrop-filter: blur(0.5px);
-      filter: blur(0.5px);
       border: solid 5px #85c7f2;
   }
   
