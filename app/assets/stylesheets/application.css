@@ -15,7 +15,6 @@
  *= require foundation_and_overrides
 
  */
-
  .body {
     background-color: #151515;
     color: #d1d1d1;
@@ -30,7 +29,7 @@
     font-size: 30px;
  }
 
- .about-us, .search, .state, .game, .day{
+ .about-us, .search, .state, .game, .day, .faq{
     text-align: center;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034);
@@ -51,13 +50,27 @@
     backdrop-filter: blur(3px);
   }
 
-  .search{
+  .search, .faq{
     height: 300px;
     border-top: solid 4px #dbdbdb;
     border-bottom: solid 4px #dbdbdb;
     border-left: 0px;
     border-right: 0px;
     background-color: #171717;
+  }
+
+  .faq{
+    margin: 10px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); 
+    background-image: url("faq.png");
+    background-size: cover;
+    transition-duration: 2.0s ease;
+  }
+  .faq:hover{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%); 
+    transition-duration: 2.0s ease;
   }
 
   .container{
@@ -73,7 +86,7 @@
     -webkit-filter: grayscale(100%); 
   }
 
-  .search-text{
+  .search-text, .faq-text{
     margin-top: 87px;
     backdrop-filter: blur(3px);
   }

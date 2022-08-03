@@ -1,8 +1,7 @@
 import React from 'react'
-import MainPage from './MainPage'
+import MainPage from './Main/MainPage'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import FAQList from './FAQlist'
-
+import FAQList from './FAQ/FAQlist'
 
 export const App = (props) => {
   return (

@@ -5,7 +5,6 @@ const FAQList = (props) => {
   const [questions, setQuestions] = useState([])
   const [selectedQuestion, setSelectedQuestion] = useState([])
 
-
   const fetchQuestions = async () => {
     try {
       const response = await fetch("/api/v1/questions");
@@ -17,7 +16,7 @@ const FAQList = (props) => {
       const questionsData = await response.json();
       
       setQuestions(questionsData);
-    } catch (err) {
+     } catch (err) {
       console.log(err);
     }
   };
@@ -25,7 +24,6 @@ const FAQList = (props) => {
   useEffect(() => {
     fetchQuestions();
   }, []);
-
 
   const toggleQuestionSelect = (id) => {
     if(id === selectedQuestion) {
@@ -57,10 +55,12 @@ const FAQList = (props) => {
 
   return(
     <div>
-        <h1>hello</h1>
-      <div className='question-list'>
-        {questionListItems}
-      </div>
+        <div className='faq'>
+          <h1 className='faq-text'>FREQUENTLY ASKED QUESTIONS</h1>
+        </div>
+        <div className='question-list'>
+          {questionListItems}
+        </div>
     </div>
   )
 

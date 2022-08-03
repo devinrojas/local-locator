@@ -17,7 +17,7 @@ const Question = props => {
         {button}
         <h5 onClick={props.handleClick}>{props.question}</h5>
       </div>
-      <p>{answer}</p>
+        <p>{answer}</p>
     </div>
   )
 }
