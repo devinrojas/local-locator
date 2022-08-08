@@ -20,10 +20,9 @@
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
-          <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %></li>
+          ><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
         <%- else -%>
-          <li><%= link_to 'SIGN UP', new_user_registration_path %></li>
-          <li><%= link_to 'SIGN IN', new_user_session_path %></li>
+           <%= link_to 'SIGN IN', new_user_session_path %>
         <%- end -%>
       </ul>
     </section>
@@ -50,6 +49,7 @@
 </body>
 
 <footer class="top-bar">
- <h3>By Devin Rojas</h3>
+ <p>CREATED BY: DEVIN ROJAS<p>
+  <a href="https://github.com/devinrojas"><i class="fa-brands fa-github"></i></a>
 </footer>
 </html>

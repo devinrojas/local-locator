@@ -4,6 +4,7 @@ import { render } from 'react-dom'
 
 import App from '../react/components/App'
 import RedBox from 'redbox-react'
+import "@fortawesome/fontawesome-free/css/all"
 
 document.addEventListener('DOMContentLoaded', () => {
   let reactElement = document.getElementById('app')
