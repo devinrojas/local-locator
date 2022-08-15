@@ -16,7 +16,7 @@
 
  */
  .body {
-    background-color: #151515;
+    background-color: #262626;
     color: #d1d1d1;
  }
 
@@ -35,8 +35,8 @@
     0 2.8px 2.2px rgba(0, 0, 0, 0.034);
     height: 500px;
     margin: 100px auto;
-    background: #636363;
-    border: solid 3px #dbdbdb;
+    background: #60656f;
+    border: solid 3px #fffbfe;
   }
 
   .about-us{
@@ -52,11 +52,11 @@
 
   .search, .faq{
     height: 300px;
-    border-top: solid 4px #dbdbdb;
-    border-bottom: solid 4px #dbdbdb;
+    border-top: solid 4px #fffbfe;
+    border-bottom: solid 4px #fffbfe;
     border-left: 0px;
     border-right: 0px;
-    background-color: #171717;
+    background-color: #000;
   }
 
   .faq{
@@ -110,7 +110,7 @@
       filter: none;
       -webkit-filter: grayscale(0);
       backdrop-filter: blur(0.5px);
-      border: solid 5px #85c7f2;
+      border: solid 5px #e28413;
   }
   
   

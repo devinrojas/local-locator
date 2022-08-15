@@ -3,11 +3,23 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  get '/about-us', to: "homes#index"
+  get '/locals', to: "homes#index"
+  get '/locals/new', to: "homes#index"
+  get '/locals/:id', to: "homes#index"
+  get '/faq', to: "homes#index"
+  get '/users/:id', to: "homes#index"
+
+
   namespace :api do
     namespace :v1 do 
-      resources :questions, only: [:index]
+      resources :questions
     end
   end
 
-  get "*path", to:"homes#index", via: :all
+  namespace :api do
+    namespace :v1 do 
+      resources :locals
+    end
+  end
 end
