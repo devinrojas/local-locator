@@ -34,6 +34,9 @@ const LocalShowPage = (props) => {
             state={local.state}
             city={local.city}
             zip={local.zip}
+            twitter={local.twitter}
+            facebook={local.facebook}
+            website={local.website}
             id={local.id}
       />
     </div> 

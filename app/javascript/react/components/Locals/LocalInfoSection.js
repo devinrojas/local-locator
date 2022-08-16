@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LocalInfoSection = ({name, bio, address, city, state, zip}) => {
+const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebook, website}) => {
     return ( 
         <div>
             <h1>{name}</h1>

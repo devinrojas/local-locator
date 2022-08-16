@@ -7,6 +7,10 @@ class CreateLocal < ActiveRecord::Migration[5.2]
       t.string :city, null: false
       t.string :state, null: false
       t.string :zip, null: false
+
+      t.string :twitter
+      t.string :facebook
+      t.string :website
       
       t.timestamps
     end

@@ -29,7 +29,7 @@
     font-size: 30px;
  }
 
- .about-us, .search, .state, .game, .day, .faq{
+ .about-us, .search, .state, .game, .day, .faq, .form{
     text-align: center;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034);
@@ -37,6 +37,7 @@
     margin: 100px auto;
     background: #60656f;
     border: solid 3px #fffbfe;
+    transition: filter .3s ease-in-out
   }
 
   .about-us{
@@ -50,7 +51,7 @@
     backdrop-filter: blur(3px);
   }
 
-  .search, .faq{
+  .search, .faq, .form{
     height: 300px;
     border-top: solid 4px #fffbfe;
     border-bottom: solid 4px #fffbfe;
@@ -59,18 +60,24 @@
     background-color: #000;
   }
 
-  .faq{
+  .faq, .form{
     margin: 10px;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%); 
     background-image: url("faq.png");
     background-size: cover;
-    transition-duration: 2.0s ease;
   }
-  .faq:hover{
+  .faq:hover, .form:hover{
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%); 
     transition-duration: 2.0s ease;
+    border-top: solid 4px #e28413;
+    border-bottom: solid 4px #e28413;
+    transition: filter .3s ease-in-out;
+  }
+  
+  .form{
+    background-image: url("form.jpg");
   }
 
   .container{
@@ -86,7 +93,7 @@
     -webkit-filter: grayscale(100%); 
   }
 
-  .search-text, .faq-text{
+  .search-text, .faq-text, .form-text{
     margin-top: 87px;
     backdrop-filter: blur(3px);
   }
@@ -110,8 +117,24 @@
       filter: none;
       -webkit-filter: grayscale(0);
       backdrop-filter: blur(0.5px);
-      border: solid 5px #e28413;
+      border: solid 3px #e28413;
+      transition: filter .3s ease-in-out
   }
+
+  .form-tile {
+    margin: 0% 10%;
+    border-color: #6DC0D5;
+}
+
+.blue{
+  background-color: #6DC0D5;
+  margin-right: 10px;
+}
+
+
+.input {
+  color: red;
+}
   
   
 
