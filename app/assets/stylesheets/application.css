@@ -29,7 +29,7 @@
     font-size: 30px;
  }
 
- .about-us, .search, .state, .game, .day, .faq, .form{
+ .about-us, .search, .state, .game, .day, .faq, .form, .about, .local{
     text-align: center;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034);
@@ -51,7 +51,7 @@
     backdrop-filter: blur(3px);
   }
 
-  .search, .faq, .form{
+  .search, .faq, .form, .about, .local{
     height: 300px;
     border-top: solid 4px #fffbfe;
     border-bottom: solid 4px #fffbfe;
@@ -60,14 +60,14 @@
     background-color: #000;
   }
 
-  .faq, .form{
+  .faq, .form, .about, .local{
     margin: 10px;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%); 
     background-image: url("faq.png");
     background-size: cover;
   }
-  .faq:hover, .form:hover{
+  .faq:hover, .form:hover, .about:hover, .local:hover{
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%); 
     transition-duration: 2.0s ease;
@@ -78,6 +78,12 @@
   
   .form{
     background-image: url("form.jpg");
+  }
+  .about{
+    background-image: url("about.jpg");
+  }
+  .local{
+    height: 150px;
   }
 
   .container{
@@ -93,7 +99,7 @@
     -webkit-filter: grayscale(100%); 
   }
 
-  .search-text, .faq-text, .form-text{
+  .search-text, .faq-text, .form-text, .about-text{
     margin-top: 87px;
     backdrop-filter: blur(3px);
   }
@@ -111,6 +117,8 @@
     background-image: url("date.jpg");
     background-size: cover;
   }
+
+
 
   .game:hover, .state:hover, .day:hover
     {
@@ -131,9 +139,47 @@
   margin-right: 10px;
 }
 
-
 .input {
   color: red;
+}
+
+.title-box{
+  background-color: #000;
+  text-align: center;
+}
+
+.social {
+  margin-right: .25rem;
+}
+
+.social.facebook {
+  background-color: #3b5998;
+  color: #fefefe;
+}
+
+.social.facebook:hover, .social.facebook:focus {
+  background-color: #2f477a;
+  color: #fefefe;
+}
+
+.social.twitter {
+  background-color: #55acee;
+  color: #fefefe;
+}
+
+.social.twitter:hover, .social.twitter:focus {
+  background-color: #1a8fe8;
+  color: #fefefe;
+}
+
+.social.website {
+  background-color: #3a3a3a;
+  color: #fefefe;
+}
+
+.social.website:hover, .social.website:focus {
+  background-color: #2b2b2b;
+  color: #fefefe;
 }
   
   
