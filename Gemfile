@@ -54,3 +54,4 @@ gem 'devise'
 gem 'foundation-rails', '~> 6.5'
 gem 'webpacker', '~> 3.3'
 gem "font-awesome-sass", "~> 6.1.2"
+gem 'friendly_id', '~> 5.4.0'

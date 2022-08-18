@@ -33,13 +33,13 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
     }, []);
     
     if(localTwitter != null){
-        localTwitter =  <a href="{twitter}" className="button social twitter"> <i className="fa-brands fa-twitter" aria-hidden="true"></i> Twitter </a>
+        localTwitter =  <a href={`${twitter}`} className="button social twitter"> <i className="fa-brands fa-twitter" aria-hidden="true"></i> Twitter </a>
     }
     if(localFacebook != null){
-        localFacebook = <a href="{facebook}" className="button social facebook"> <i className="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook </a>
+        localFacebook = <a href={`${facebook}`}  className="button social facebook"> <i className="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook </a>
     }
     if(localWeb != null){
-        localWeb = <a href="{website}" className="button social website"> Website </a>
+        localWeb = <a href={`${website}`}  className="button social website"> Website </a>
     }
 
     const MapWithAMarker = withScriptjs(withGoogleMap(props =>
