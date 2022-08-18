@@ -28,6 +28,7 @@ const LocalIndexPage = (props) => {
             key={local.id}
             name={local.name}
             bio={local.bio}
+            slug={local.slug}
           />
         );
       });

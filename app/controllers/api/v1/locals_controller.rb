@@ -5,7 +5,7 @@ class Api::V1::LocalsController < ApiController
     end
 
     def show
-        local = Local.find(params[:id])
+        local = Local.friendly.find(params[:id])
         render json: local
     end
 
