@@ -3,4 +3,3 @@ class Favorite < ApplicationRecord
     belongs_to :local
     belongs_to :user
   end
-Footer
