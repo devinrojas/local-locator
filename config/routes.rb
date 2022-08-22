@@ -19,7 +19,9 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do 
-      resources :locals
+      resources :locals do
+      resources :favorties, only: [:create, :index]
+      end
     end
   end
 
