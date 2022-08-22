@@ -22,20 +22,25 @@ const LocalIndexPage = (props) => {
       getLocals();
     }, []);
 
-      const localArray = locals.map((local) => {
-        return (
-          <LocalTile
-            key={local.id}
-            name={local.name}
-            bio={local.bio}
-            slug={local.slug}
-          />
-        );
-      });
-
+    const localArray = locals.map((local) => {
+      return (
+        <LocalTile
+        bio={local.bio}
+        city={local.city}
+        id={local.id}
+        key={local.id}
+        name={local.name}
+        state={local.state}
+        slug={local.slug}
+        />
+      );
+    });
 
     return (  
         <div>
+            <div className='about'>
+             <h1 className='about-text'>ALL LOCALS</h1>
+            </div>
             <div>
                 {localArray}
             </div>

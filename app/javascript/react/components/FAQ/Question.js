@@ -15,7 +15,7 @@ const Question = props => {
     <div>
       <div className={questionClass}>
       {button}
-        <h5 onClick={props.handleClick}>{props.question}</h5>
+        <h5 onClick={props.handleClick} className="nav-text">{props.question}</h5>
       </div>
         <p>{answer}</p>
     </div>

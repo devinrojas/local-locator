@@ -339,7 +339,7 @@ $callout-sizes: (
   default: 1rem,
   large: 3rem,
 );
-$callout-font-color: $white;
+$callout-font-color: $black;
 $callout-font-color-alt: $white;
 $callout-radius: $global-radius;
 $callout-link-tint: 30%;
@@ -350,7 +350,7 @@ $callout-link-tint: 30%;
 $card-background: $black;
 $card-font-color: $body-font-color;
 $card-divider-background: $light-gray;
-$card-border: 1px solid $light-gray;
+$card-border-top: 1px solid $light-gray;
 $card-shadow: none;
 $card-border-radius: $global-radius;
 $card-padding: $global-padding;
@@ -847,7 +847,7 @@ $thumbnail-radius: $global-radius;
 // -------------
 
 $titlebar-background: $black;
-$titlebar-color: $white;
+$titlebar-color: $black;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
 $titlebar-icon-color: $white;

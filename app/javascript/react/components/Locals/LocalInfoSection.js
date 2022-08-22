@@ -1,17 +1,17 @@
 import React, {useState, useEffect} from 'react';
-import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow, } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker, } from "react-google-maps";
 import Geocode from "react-geocode";
 
 Geocode.setApiKey("AIzaSyACTxTtjv8zzjp5kgFi6lnu5Jx0VjRBJM0")
 
-const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebook, website}) => {
+const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebook, website, id}) => {
     const [geolocation, setGeolocation] = useState({
         lat: 0,
         lng: 0
     });
-    let localTwitter = twitter
-    let localFacebook = facebook
-    let localWeb = website
+    let localTwitter
+    let localFacebook
+    let localWeb
     const getCoordinates = async () => {
         try {
           const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=AIzaSyACTxTtjv8zzjp5kgFi6lnu5Jx0VjRBJM0`);
@@ -20,6 +20,7 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
             throw new Error(errorMessage);
           }
           const localData = await response.json();
+          console.log(localData)
           geolocation.lat = localData.results[0]?.geometry.location.lat
           geolocation.lng = localData.results[0]?.geometry.location.lng
           setGeolocation({ lat: geolocation.lat , lng: geolocation.lng } )
@@ -29,16 +30,18 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
     };
 
     useEffect(() => {
-    getCoordinates();
+      if (address && city && state) {
+        getCoordinates();
+      }
     }, []);
     
-    if(localTwitter != null){
+    if(twitter) {
         localTwitter =  <a href={`${twitter}`} className="button social twitter"> <i className="fa-brands fa-twitter" aria-hidden="true"></i> Twitter </a>
     }
-    if(localFacebook != null){
+    if(facebook){
         localFacebook = <a href={`${facebook}`}  className="button social facebook"> <i className="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook </a>
     }
-    if(localWeb != null){
+    if(website){
         localWeb = <a href={`${website}`}  className="button social website"> Website </a>
     }
 
@@ -50,7 +53,6 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
         <Marker
           position={{ lat: geolocation.lat , lng: geolocation.lng }}
         >
-        <InfoWindow><div>{name}</div></InfoWindow>
         </Marker>
       </GoogleMap>
     ));
@@ -67,17 +69,17 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
             mapElement={<div style={{ height: `100%` }} />}
             />
             <div className='grid-x grid-padding-x'>
-                    <div className='medium-8 cell'>
-                        <h5>Description:</h5>
-                        <p>{bio}</p>
-                        <p>Address: {address} | {city}, {state} {zip}</p>
-                    </div>
-                    <div className='medium-4 cell'>
-                        <h5>Social Links:</h5>
-                        {localTwitter}
-                        {localFacebook}
-                        {localWeb}
-                    </div>
+                <div className='medium-7 cell card'>
+                    <h5>Description:</h5>
+                    <p>{bio}</p>
+                    <p>Address: {address} | {city}, {state} {zip}</p>
+                </div>
+                <div className='medium-5 cell card'>
+                    <h5>Social Links:</h5>
+                    {localTwitter}
+                    {localFacebook}
+                    {localWeb}
+                </div>
             </div>
         </div>
      );

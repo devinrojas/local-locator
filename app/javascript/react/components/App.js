@@ -6,6 +6,7 @@ import MainPage from './Main/MainPage'
 import NewLocalForm from './Locals/NewLocalForm'
 import React from 'react'
 import AboutUsPage from './About/AboutUsPage'
+import UserPage from './Users/UserPage'
 
 export const App = (props) => {
   return (
@@ -17,6 +18,7 @@ export const App = (props) => {
         <Route exact path="/locals/:id" component={LocalShowPage} />
         <Route exact path='/FAQ' component={FAQList}/>
         <Route exact path='/about-us' component={AboutUsPage}/>
+        <Route exact path='/users/:id' component={UserPage}/>
       </Switch>
     </BrowserRouter>   
   )

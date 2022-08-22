@@ -11,9 +11,7 @@ class Local < ActiveRecord::Base
     friendly_id :name_slug, use: :slugged
 
     def name_slug
-        
           [:name]
-
     end
 
 end
