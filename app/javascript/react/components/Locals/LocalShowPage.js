@@ -6,40 +6,41 @@ const LocalShowPage = (props) => {
 
     let localId = props.match.params.id
 
-    const fetchLocal = async () => {
-        try {
-          const response = await fetch(`/api/v1/locals/${localId}`);
-          if (!response.ok) {
-            const errorMessage = `${response.status} (${response.statusText})`;
-            throw new Error(errorMessage);
-          }
-          const localData = await response.json();
-          setLocal(localData);
-        } catch (err) {
-          console.log(err);
+    const getLocal = async () => {
+      try {
+        const response = await fetch(`/api/v1/locals/${localId}`);
+        if (!response.ok) {
+          const errorMessage = `${response.status} (${response.statusText})`;
+          throw new Error(errorMessage);
         }
-      };
+        const localData = await response.json();
+        setLocal(localData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
-      useEffect(() => {
-        fetchLocal();
-      }, []);
+    useEffect(() => {
+      getLocal();
+    }, []);
+
     return ( 
-    <div>
-    <LocalInfoSection
-            key={local.id}
-            name={local.name}
-            bio={local.bio}
-            photo={local.photo}
-            address={local.address}
-            state={local.state}
-            city={local.city}
-            zip={local.zip}
-            twitter={local.twitter}
-            facebook={local.facebook}
-            website={local.website}
-            id={local.id}
-      />
-    </div> 
+      <div>
+        <LocalInfoSection
+                address={local.address}
+                bio={local.bio}
+                city={local.city}
+                facebook={local.facebook}
+                id={local.id}
+                key={local.id}
+                name={local.name}
+                photo={local.photo}
+                state={local.state}
+                twitter={local.twitter}
+                website={local.website}
+                zip={local.zip}
+          />
+      </div> 
     );
 }
  

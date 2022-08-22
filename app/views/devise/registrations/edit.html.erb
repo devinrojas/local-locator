@@ -21,8 +21,28 @@
     </div>
 
     <div class="field">
-      <%= f.label :avatar, "Change Avatar", class: "form-label-text" %>
+      <%= f.label :bio, "Bio", class: "form-label-text" %>
+      <%= f.text_field :bio %>
+    </div>
+
+    <div class="field">
+      <%= f.label :avatar, "Change Profile Photo", class: "form-label-text" %>
       <%= f.file_field :avatar %>
+    </div>
+
+    <div class="field">
+      <%= f.label :twitter, "Twitter URL", class: "form-label-text" %>
+      <%= f.text_field :twitter %>
+    </div>
+
+    <div class="field">
+      <%= f.label :facebook, "Facebook URL", class: "form-label-text" %>
+      <%= f.text_field :facebook %>
+    </div>
+
+    <div class="field">
+      <%= f.label :website, "Website URL", class: "form-label-text" %>
+      <%= f.text_field :website %>
     </div>
 
     <div class="field">
@@ -45,11 +65,11 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Update", class: "button secondary" %>
+      <%= f.submit "Update", class: "button" %>
     </div>
+    <div class="center" >
+      <%= link_to "Back", :back, class: "button secondary text-center" %>
   <% end %>
 </div>
 
-<div class="center" >
-  <%= link_to "Back", :back, class: "button secondary text-center" %>
 </div>
