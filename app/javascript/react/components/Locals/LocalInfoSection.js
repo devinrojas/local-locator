@@ -90,12 +90,13 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
             />
             <div className='grid-x grid-padding-x'>
                 <div className='medium-6 cell card'>
-                    <h5>Description:</h5>
+                    <h5 className="username">Description</h5>
                     <p>{bio}</p>
-                    <p>Address: {address} | {city}, {state} {zip}</p>
+                    <h5 className="username">Address</h5>
+                    <p>{address} | {city}, {state} {zip}</p>
                 </div>
-                <div className='medium-4 cell card'>
-                    <h5>Social Links:</h5>
+                <div className='medium-5 cell card'>
+                    <h5 className="social-link">Social Links</h5>
                     {localTwitter}
                     {localFacebook}
                     {localWeb}

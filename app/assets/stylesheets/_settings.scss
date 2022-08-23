@@ -78,9 +78,9 @@ $foundation-palette: (
 $orange: #e28413;
 $blue: #6DC0D5;
 $gray: #60656F;
-$light-gray: #7a7a7a;
-$black: #262626;
-$white: #FFFBFE;
+$light-gray: #99aab5;
+$black: #23272a;
+$white: #fffBFE;
 $body-background: $black;
 $body-font-color: $white;
 $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
@@ -347,8 +347,8 @@ $callout-link-tint: 30%;
 // 14. Card
 // --------
 
-$card-background: $black;
-$card-font-color: $body-font-color;
+$card-background: $white;
+$card-font-color: $black;
 $card-divider-background: $light-gray;
 $card-border-top: 1px solid $light-gray;
 $card-shadow: none;

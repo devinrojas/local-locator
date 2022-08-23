@@ -47,20 +47,22 @@ const UserPage = (props) => {
     }
 
   return (
-    <div className=" callout grid-container">
+    <div className="grid-container">
     <div className="grid-x grid-margin-x">
 
       <div className="card cell medium-4">
         <div className="">
             <img src={user.avatar.url} alt= {`${user.username}`} />
         </div>
-        <h4 className="">{user.username}</h4>
-        <p>{user.bio}</p>
+        <h4 className="username">{user.username}</h4>
+        <p className="bio">{user.bio}</p>
 
-        <p className="">Joined: {dateJoined()}</p>
-        <p>Role: {user.role}</p>
+        <div className="role-date">
+            <p >Joined: {dateJoined()}</p>
+            <p >Role: {user.role}</p>
+        </div>
 
-        <p>social Links</p>
+        <p className="social-link">Social Links</p>
         {localTwitter}
         {localFacebook}
         {localWeb}
@@ -69,15 +71,15 @@ const UserPage = (props) => {
       </div>
 
       <div className="card cell medium-8">
-            <div className="">
-                    <p>Favorite Venue</p>
+            <div className="username">
+                    <p>FAVORITE VENUES</p>
                 </div>
                 <h4 className="">Venue here</h4>
                 <p>bio</p>
 
                 <p className="">Games Playing</p>
 
-                <p>street fighter icon</p>
+            <img src="app/assets/images/Icons/sfv.png" alt="street fighter v"/>
       </div>
 
     </div>

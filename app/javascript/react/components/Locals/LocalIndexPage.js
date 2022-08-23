@@ -41,8 +41,10 @@ const LocalIndexPage = (props) => {
             <div className='about'>
              <h1 className='about-text'>ALL LOCALS</h1>
             </div>
-            <div>
-                {localArray}
+            <div >
+              <div >
+                  {localArray}
+              </div>
             </div>
         </div>
     );
