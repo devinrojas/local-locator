@@ -116,7 +116,7 @@ const NewLocalForm = (props) => {
                             </div>
                             <div className="medium-8 cell">
                                 <label>
-                                    Venue Description:* <span className="input">*</span>
+                                    Venue Description: <span className="input">*</span>
                                     <input
                                     type="text"
                                     id="bio"
@@ -170,18 +170,6 @@ const NewLocalForm = (props) => {
                                 </label> 
                             </div>
                         </div>
-
-                        <label>Days played: <span className="input">*</span> </label>
-                        <fieldset className="fieldset grid-x grid-padding-x">
-                            <label > Sun <input  type="checkbox"/></label>
-                            <label > Mon <input  type="checkbox"/></label>
-                            <label > Tues <input  type="checkbox"/></label>
-                            <label > Wed <input  type="checkbox"/></label>
-                            <label > Thurs <input  type="checkbox"/></label>
-                            <label > Fri <input  type="checkbox"/></label>
-                            <label > Sat  <input  type="checkbox"/></label>
-                        </fieldset>
-
                         <div className="grid-x grid-padding-x">
                             <div className="medium-6 cell">
                                 <label>
@@ -220,14 +208,14 @@ const NewLocalForm = (props) => {
                         
                         <label>Games played: <span className="input">*</span> </label>
                         <fieldset className="fieldset grid-x grid-padding-x">
-                            <label> Street Fighter V <input  type="checkbox"/></label>
-                            <label> Guilty Gear: Strive <input  type="checkbox"/></label>
-                            <label> Tekken 7 <input  type="checkbox"/></label>
-                            <label> Dragonball FighterZ <input  type="checkbox"/></label>
-                            <label> The King of Fighters XV <input  type="checkbox"/></label>
-                            <label> Anime( Melty Blood / Blazblue ) <input  type="checkbox"/></label>
-                            <label> Retro( 3S, ST, USFIV, VSAV, etc. )  <input  type="checkbox"/></label>
-                            <label> Other <input  type="checkbox"/></label>
+                            <input id="sfv" type="checkbox"/><label for="sfv"> Street Fighter V </label>
+                            <input id="ggst" type="checkbox"/><label for="ggst"> Guilty Gear: Strive</label>
+                            <input id="t7" type="checkbox"/><label for="t7"> Tekken 7</label>
+                            <input id="dbfz" type="checkbox"/><label for="dbfz"> Dragonball FighterZ</label>
+                            <input id="kof" type="checkbox"/><label for="kof"> The King of Fighters XV </label>
+                            <input id="anime" type="checkbox"/><label for="anime"> Anime( Melty Blood / Blazblue )</label>
+                            <input id="retro" type="checkbox"/><label for="retro"> Retro( 3S, ST, USFIV, VSAV, etc. )</label>
+                            <input id="other" type="checkbox"/><label for="other"> Other</label>
                         </fieldset>
                         <div>
                             <button onClick={clearForm} className="button blue">

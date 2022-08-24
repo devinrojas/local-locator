@@ -67,6 +67,8 @@ const UserPage = (props) => {
         {localFacebook}
         {localWeb}
 
+        <hr></hr>
+
         <a className="button edit-button" href={`/users/edit`} > Edit Profile </a>
       </div>
 
@@ -74,12 +76,12 @@ const UserPage = (props) => {
             <div className="username">
                     <p>FAVORITE VENUES</p>
                 </div>
-                <h4 className="">Venue here</h4>
-                <p>bio</p>
+                <h4 className="">Venue will go here once favorited</h4>
+                <p>The venue's bio</p>
 
-                <p className="">Games Playing</p>
+                <p className="username">Games Playing</p>
 
-            <img src="app/assets/images/Icons/sfv.png" alt="street fighter v"/>
+            <img src={'app/assets/images/Icons/sfv.png'} />
       </div>
 
     </div>

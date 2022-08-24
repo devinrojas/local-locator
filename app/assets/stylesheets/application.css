@@ -17,164 +17,139 @@
  */
 
 
- .top-bar, .footer{  
-    background-color: #171717;
-    height: 75px;
- }
+.top-bar, .footer{  
+  background-color: #171717;
+  height: 75px;
+}
 
- .top-bar{
-  border-bottom: solid 1px #e28413;
- }
+.top-bar{
+border-bottom: solid 1px #e28413;
+}
 
- .top-bar:hover{
-  -webkit-box-shadow:0px 0px 174px 0px rgba(109,192,213,0.9);
-  -moz-box-shadow: 0px 0px 174px 0px rgba(109,192,213,0.9);
-  box-shadow: 0px 0px 174px 0px rgba(109,192,213,0.9);
- }
+.top-bar:hover{
+-webkit-box-shadow:0px 0px 174px 0px rgba(109,192,213,0.9);
+-moz-box-shadow: 0px 0px 174px 0px rgba(109,192,213,0.9);
+box-shadow: 0px 0px 174px 0px rgba(109,192,213,0.9);
+}
 
- .footer{
-      height: 100px;
-      border-top: solid 1px #6DC0D5;
- }
+.footer{
+    height: 100px;
+    border-top: solid 1px #6DC0D5;
+}
 
- .footer:hover{
-    -webkit-box-shadow:0px 0px 174px 0px rgba(226,133,19,0.9);
-  -moz-box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
-  box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
-  }
+.footer:hover{
+  -webkit-box-shadow:0px 0px 174px 0px rgba(226,133,19,0.9);
+-moz-box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
+box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
+}
 
- .footer-text{
-    font-size: 12px;
- }
+.footer-text{
+  font-size: 12px;
+}
 
- .home-link{
-    font-size: 30px;
- }
+.home-link{
+  font-size: 30px;
+}
 
- .about-us, .search, .state, .game, .day, .faq, .form, .about, .local{
-    text-align: center;
-    box-shadow:
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034);
-    height: 500px;
-    margin: 100px auto;
-    background: #60656f;
-    border: solid 3px #fffbfe;
+.about-us, .faq, .form, .about, .local{
+  text-align: center;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034);
+  height: 300px;
+  background: #60656f;
+  border: solid 3px #fffbfe;
+  transition: filter .3s ease-in-out
+}
+
+.faq, .form, .about, .local{
+  height: 300px;
+  border-top: solid 4px #fffbfe;
+  border-bottom: solid 4px #fffbfe;
+  border-left: 0px;
+  border-right: 0px;
+  background-color: #000;
+}
+
+.faq, .form, .about, .local, .small-image, .local-tile{
+  margin: 10px;
+  filter: grayscale(35%);
+  -webkit-filter: grayscale(35%); 
+  background-image: url("faq.png");
+  background-size: cover;
+  text-shadow: 0 0 3px black;
+}
+.faq:hover, .form:hover, .about:hover, .local:hover{
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%); 
+  transition-duration: 2.0s ease;
+  border-top: solid 4px #e28413;
+  border-bottom: solid 4px #e28413;
+  transition: filter .3s ease-in-out;
+}
+
+.local-tile, .welcome{
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%); 
+  background-image: url("color.jpg");
+  background-size: cover;
+  border-top: solid 2px #6DC0D5;
+  border-bottom: solid 2px #6DC0D5;
+  max-height: 100%;
+}
+
+.welcome{
+  filter: grayscale(30%);
+  -webkit-filter: grayscale(30%); 
+  color: #fffbfe;
+  text-align: center;
+}
+
+.local-tile:hover, .welcome:hover, .all-locals:hover, .faq-panel:hover, .submit-local:hover, .your-profile:hover{
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%); 
+  transition-duration: 2.0s ease;
+  transition: filter .3s ease-in-out;
+  -webkit-box-shadow:0px 10px 39px 11px rgba(255,251,254,0.19);
+  -moz-box-shadow: 0px 10px 39px 11px rgba(255,251,254,0.19);
+  box-shadow: 0px 10px 39px 11px rgba(255,251,254,0.19);
+}
+
+.form{
+  background-image: url("form.jpg");
+}
+.about{
+  background-image: url("about.jpg");
+}
+.local{
+  height: 150px;
+}
+
+.container{
+  display: inline-block;
+}
+
+.faq-text, .form-text, .about-text, .card-text{
+  margin-top: 87px;
+  backdrop-filter: blur(3px);
+}
+
+.game{
+  background-image: url("game.jpg");
+  background-size: cover;
+}
+
+.game:hover, .state:hover, .day:hover
+  {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    backdrop-filter: blur(0.5px);
+    border: solid 3px #e28413;
     transition: filter .3s ease-in-out
-  }
+}
 
-  .about-us{
-    width: 1000px;
-    background-image: url("evo.jpg");
-    background-size: cover;
-  }
-
-  .about-us-text{
-    margin-top: 150px;
-    backdrop-filter: blur(3px);
-  }
-
-  .search, .faq, .form, .about, .local{
-    height: 300px;
-    border-top: solid 4px #fffbfe;
-    border-bottom: solid 4px #fffbfe;
-    border-left: 0px;
-    border-right: 0px;
-    background-color: #000;
-  }
-
-  .faq, .form, .about, .local, .small-image, .local-tile{
-    margin: 10px;
-    filter: grayscale(35%);
-    -webkit-filter: grayscale(35%); 
-    background-image: url("faq.png");
-    background-size: cover;
-    text-shadow: 0 0 3px black;
-  }
-  .faq:hover, .form:hover, .about:hover, .local:hover{
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%); 
-    transition-duration: 2.0s ease;
-    border-top: solid 4px #e28413;
-    border-bottom: solid 4px #e28413;
-    transition: filter .3s ease-in-out;
-  }
-
-  .local-tile{
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%); 
-    background-image: url("color.jpg");
-    border-top: solid 2px #6DC0D5;
-    border-bottom: solid 2px #6DC0D5;
-    max-height: 100%;
-  }
-
-  .local-tile:hover{
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0%); 
-    transition-duration: 2.0s ease;
-    transition: filter .3s ease-in-out;
-    -webkit-box-shadow:0px 10px 39px 11px rgba(255,251,254,0.19);
-    -moz-box-shadow: 0px 10px 39px 11px rgba(255,251,254,0.19);
-    box-shadow: 0px 10px 39px 11px rgba(255,251,254,0.19);
-  }
-  
-  .form{
-    background-image: url("form.jpg");
-  }
-  .about{
-    background-image: url("about.jpg");
-  }
-  .local{
-    height: 150px;
-  }
-
-
-  .container{
-    display: inline-block;
-  }
-
-  .state, .game, .day{
-    width: 175px;
-    height: 175px;
-    float: left;
-    margin: 20px;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%); 
-  }
-
-  .search-text, .faq-text, .form-text, .about-text{
-    margin-top: 87px;
-    backdrop-filter: blur(3px);
-  }
-
-  .game{
-    background-image: url("game.jpg");
-    background-size: cover;
-  }
-  
-  .state{
-    background-image: url("state.jpg");
-    background-size: cover;
-  }
-  .day{
-    background-image: url("date.jpg");
-    background-size: cover;
-  }
-
-
-
-  .game:hover, .state:hover, .day:hover
-    {
-      filter: none;
-      -webkit-filter: grayscale(0);
-      backdrop-filter: blur(0.5px);
-      border: solid 3px #e28413;
-      transition: filter .3s ease-in-out
-  }
-
-  .form-tile {
-    margin: 0% 10%;
-    border-color: #6DC0D5;
+.form-tile {
+  margin: 0% 10%;
+  border-color: #6DC0D5;
 }
 
 .blue{
@@ -241,7 +216,7 @@
   transition: filter .3s ease-in-out;
 }
   
-.nav-text, .sign-text {
+.nav-text, .sign-text, .welcome-text {
   color: #fffbfe;
 }
 
@@ -249,7 +224,7 @@
   color: #6DC0D5;
 }
 
-.sign-text:hover{
+.sign-text:hover, .welcome-text:hover, .card-text:hover{
   color: #e28413;
 }
 
@@ -259,7 +234,6 @@
 }
 
 .card{
-  padding: 10px;
   margin: 10px;
   border-top: 2px solid #6DC0D5;
   border-bottom: 2px solid #6DC0D5;
@@ -272,10 +246,8 @@
 
 .username, .social-link{
   text-align: center;
-  background-image: url("color.jpg");
-  background-size: cover;
-  border: solid 1px #6DC0D5;
-  color: #fffbfe;
+  background-image: url("ryu.png");
+  color: #171717;
   margin-top: 3px;
 }
 
@@ -294,4 +266,38 @@
 
 .bio-text{
   color: #fffbfe;
+}
+
+.all-locals, .submit-local, .faq-panel, .your-profile{
+  height: 300px;
+}
+
+.all-locals{
+  background-image: url("sfv.jpg");
+  background-size: cover;
+  margin-right: 70px;
+}
+.submit-local{
+  background-image: url("soul.jpg");
+  background-size: cover;
+}
+.faq-panel{
+  background-image: url("kof.jpg");
+  background-size: cover;
+  margin-right: 70px;
+}
+.your-profile{
+  background-image: url("mk11.jpg");
+  background-size: cover;
+}
+
+.card-text{
+  color: #fffbfe;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 1px 1px 3px black;
+}
+
+.logo{
+  height: 75px;
 }
