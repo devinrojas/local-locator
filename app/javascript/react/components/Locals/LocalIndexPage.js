@@ -3,6 +3,7 @@ import LocalTile from './LocalTile';
 
 const LocalIndexPage = (props) => {
     const [locals, setLocals] = useState([]);
+    const [query, setQuery] = useState("")
   
     const getLocals = async () => {
       try {
@@ -22,7 +23,12 @@ const LocalIndexPage = (props) => {
       getLocals();
     }, []);
 
-    const localArray = locals.map((local) => {
+
+    const changeHandler = (event) => {
+      setQuery(event.target.value)
+    }
+    
+    const localArray = locals.filter(local=>local.name.toLowerCase().includes(query)).map((local) => {
       return (
         <LocalTile
         bio={local.bio}
@@ -41,6 +47,11 @@ const LocalIndexPage = (props) => {
             <div className='about'>
              <h1 className='about-text'>ALL LOCALS</h1>
             </div>
+            <input type="text"
+             placeholder='Search locals...'
+             className='animated-search-form'
+             onChange={changeHandler}
+            />
             <div >
               <div >
                   {localArray}

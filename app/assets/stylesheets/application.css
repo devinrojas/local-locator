@@ -301,3 +301,27 @@ box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
 .logo{
   height: 75px;
 }
+
+.animated-search-form[type=text] {
+  width: 20rem;
+  border: 0.125rem solid #e28413;
+  box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.18);
+  border-radius: 0;
+  background-image: url("https://image.ibb.co/i7NbrQ/search_icon_15.png");
+  background-position: 0.625rem 0.625rem;
+  background-repeat: no-repeat;
+  padding: 0.75rem 1.25rem 0.75rem 2rem;
+  transition: width 0.4s ease-in-out;
+  margin-left: 16px;
+}
+
+.animated-search-form[type=text]:focus {
+  width: 55%;
+}
+
+.animated-search-form[type=text]:hover {
+  -webkit-box-shadow:0px 10px 39px 11px rgba(255,251,254,0.19);
+  -moz-box-shadow: 0px 10px 39px 11px rgba(255,251,254,0.19);
+  box-shadow: 0px 10px 39px 11px rgba(255,251,254,0.19);
+}
+
