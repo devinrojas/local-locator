@@ -5,7 +5,6 @@ import Geocode from "react-geocode";
 Geocode.setApiKey("AIzaSyACTxTtjv8zzjp5kgFi6lnu5Jx0VjRBJM0")
 
 const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebook, website, id}) => {
-    const [favorite, setFavorite] = useState();
     const [count, setCount] = useState();
     const [geolocation, setGeolocation] = useState({
         lat: 0,
@@ -90,6 +89,7 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
             />
             <div className='grid-x grid-padding-x'>
                 <div className='medium-6 cell card'>
+                  <button className='button'>Favorite this local</button>
                     <h5 className="username">Description</h5>
                     <p>{bio}</p>
                     <h5 className="username">Address</h5>
