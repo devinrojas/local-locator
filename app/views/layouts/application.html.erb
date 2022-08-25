@@ -14,31 +14,53 @@
     </div>
     <div class="top-bar grid-x" id="responsive-menu">
       <div class="cell small-5">
-        <h4><a href="/locals" class="nav-text icon" >All Locals</a><h4>
-        <h4><a href="/locals/new" class="nav-text" >Submit A Local</a><h4>
+          <div class="multilevel-offcanvas off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+                    <ul class="vertical menu">
+                     <%- if current_user -%>
+                      <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+                     <%- else -%>
+                      <%= link_to 'Log In', new_user_session_path %>
+                      <%= link_to 'Sign Up', new_user_registration_path %> 
+                     <%- end -%>
+                    </ul>
+                    <ul class="vertical menu">
+                      <li><a href="/locals">All Locals</a></li>
+                      <li><a href="/locals/new">Submit A Local</a></li>
+                      <li><a href="/faq">FAQ</a></li>
+                    </ul>
+                  </div>
+                    <button class="offcanvas-trigger" type="button" data-open="offCanvasLeft">
+                          <span class=" sign-text">MENU</span>
+                          <div class="hamburger">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                          </div>
+                    </button>
+                  </div>
+                  <div class="cell small-3">
+                    <a href="/"><img class="logo" src=<%= image_url("logo.png")%> alt="Local Locator"></a>
+                  </div>
+                  <div class="cell auto grid-container"> 
+                    <div class="grid-x grid-margin-x right">
+                      <%- if current_user -%>
+                        <div class="cell auto text-right top-bar-text-wrapper sign-text" >
+                            <a href="/users/<%="#{current_user.slug}"%>"><img class="small-image" src=<%="#{current_user.avatar}"%> alt=<%="#{current_user.username}"%> /></a>
+                            <%= link_to "#{current_user.username}", "/users/#{current_user.slug}", class: "text-right top-bar-text sign-text" %> 
+                        </div>
+                      <%- else -%>
+                        <div class="cell auto  sign-text" >
+                          <%= link_to 'SIGN UP', new_user_registration_path, class: "text-right top-bar-text sign-text" %> 
+                          &nbsp; / &nbsp; 
+                          <%= link_to 'LOG IN', new_user_session_path, class: "sign-text text-right top-bar-text" %>
+                        </div>
+                      <%- end -%>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
       </div>
-      <div class="cell small-3">
-        <a href="/"><img class="logo" src=<%= image_url("logo.png")%> alt="Local Locator"></a>
-      </div>
-      <div class="cell auto grid-container"> 
-        <div class="grid-x grid-margin-x right">
-          <%- if current_user -%>
-            <div class="cell auto text-right top-bar-text-wrapper sign-text" >
-                <a href="/users/<%="#{current_user.slug}"%>"><img class="small-image" src=<%="#{current_user.avatar}"%> alt=<%="#{current_user.username}"%> /></a>
-                <%= link_to "#{current_user.username}", "/users/#{current_user.slug}", class: "text-right top-bar-text sign-text" %>
-                &nbsp; / &nbsp; 
-                <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class: "text-left top-bar-text sign-text" %>
-            </div>
-          <%- else -%>
-            <div class="cell auto  sign-text" >
-              <%= link_to 'SIGN UP', new_user_registration_path, class: "text-right top-bar-text sign-text" %> 
-              &nbsp; / &nbsp; 
-              <%= link_to 'LOG IN', new_user_session_path, class: "sign-text text-right top-bar-text" %>
-            </div>
-          <%- end -%>
-        </div>
-      </div>
-    </div>
 
   <%- flash.each do |key, value| -%>
     <div class="flash callout alert flash-<%= key %>">
