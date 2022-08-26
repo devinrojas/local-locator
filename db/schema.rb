@@ -10,20 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_24_204246) do
+ActiveRecord::Schema.define(version: 2022_08_25_184524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "favorites", force: :cascade do |t|
-    t.integer "favorite", default: 0, null: false
-    t.bigint "local_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["local_id"], name: "index_favorites_on_local_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
-  end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -45,6 +35,16 @@ ActiveRecord::Schema.define(version: 2022_08_24_204246) do
     t.bigint "game_id", null: false
     t.index ["game_id"], name: "index_inventories_on_game_id"
     t.index ["local_id"], name: "index_inventories_on_local_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "local_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["local_id"], name: "index_likes_on_local_id"
+    t.index ["user_id", "local_id"], name: "index_likes_on_user_id_and_local_id", unique: true
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "locals", force: :cascade do |t|
@@ -89,4 +89,6 @@ ActiveRecord::Schema.define(version: 2022_08_24_204246) do
     t.index ["slug"], name: "index_users_on_slug", unique: true
   end
 
+  add_foreign_key "likes", "locals"
+  add_foreign_key "likes", "users"
 end
