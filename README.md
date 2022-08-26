@@ -4,7 +4,7 @@ Welcome! Local Locator is an app i created to help users find and create venues 
 
 #### https://locallocator.herokuapp.com/
 <br/>
-Not only is Local Locator my first solo project, but it's also a passion project I've had in mind for years. I love playing games like Street Fighter and Mortal Kombat in my spare time. Traving around the world and meeting others with the same interest as me brings me so much joy in life. Sadly, unless you are in private social media groups, know someone in the know, outdated spreadsheets, or go through countless threads trying to find a event in your area, it's pretty hard to do. That's why Local Locator exists. To be a one-stop and very easy way for others to find local events near you!
+Not only is Local Locator my first solo project, but it's also a passion project I've had in mind for years. I love playing games like Street Fighter and Mortal Kombat in my spare time. Traving around the world and meeting others with the same interest as me brings me so much joy in life. Sadly, unless you are in private social media groups, know someone in the know, outdated spreadsheets, or go through countless threads trying to find an event in your area, it's pretty hard to do. That's why Local Locator exists. To be a one-stop and very easy way for others to find local events near you!
 <br/>
 Other than Rails, React JS, and Foundation CSS, Local Locator uses the Google Maps API to help users see the exact location of the venue being hosted. In the future, I plan to use the Google Autofill API, and a Twitch API for users to get more information about a game.
 
