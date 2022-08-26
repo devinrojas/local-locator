@@ -37,7 +37,6 @@ Other than Rails, React JS, and Foundation CSS, Local Locator uses the Google Ma
 * [Foundation](https://foundation.zurb.com/) - CSS Framework
 * [FontAwesome](https://fontawesome.com/) - Icons
 * [MakeItSo](https://github.com/LaunchAcademy/make_it_so) - Ruby gem for quick project set-up
-* [Moment.js](https://momentjs.com/) - Parse, manipulate and display times in JavaScript
 * [GoogleMaps API](https://mapsplatform.google.com/) - React Library for rendering Google Charts
 
 ### In the future
