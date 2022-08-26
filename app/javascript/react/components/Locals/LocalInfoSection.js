@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, } from "react-google-maps";
 import Geocode from "react-geocode";
+import { faHelicopterSymbol } from '@fortawesome/free-solid-svg-icons';
 
 Geocode.setApiKey("AIzaSyACTxTtjv8zzjp5kgFi6lnu5Jx0VjRBJM0")
 
 const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebook, website, id}) => {
-    const [count, setCount] = useState();
-    const [geolocation, setGeolocation] = useState({
+  const [likeActive, setLikeActive] = useState(false)
+  // const [likeText, setLikeText] = useState("Like This Venue")
+  const [geolocation, setGeolocation] = useState({
         lat: 0,
         lng: 0
     });
@@ -14,6 +16,7 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
     let localFacebook
     let localWeb
 
+    // see about moving this maps request to the backend
     const getCoordinates = async () => {
       try {
         const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address},${city},${state}&key=AIzaSyACTxTtjv8zzjp5kgFi6lnu5Jx0VjRBJM0`);
@@ -37,31 +40,35 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
       }
     }, []);
 
-    const getFavorites = async () => {
+    const addLike = async () => {
       try {
-        const response = await fetch(
-          `/api/v1/locals/${id}/favorites`
-        );
-        const favoriteData = await response.json();
-        setFavorite(favoriteData.favorites);
-        setCount(favoriteData.total);
-      } catch (err) {
-        console.log(err);
-      }
+          const response = await fetch(`/api/v1/locals/${id}/likes`, {
+            method: "POST",
+            credentials: "same-origin",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+          });
+          // note: it would be best practice to check for an error. If an error is present, dont do `setLikeActive(true);`
+          setLikeActive(true);
+        } catch (err) {
+            console.log(err);
+        }
     };
-  
-    useEffect(() => {
-      getFavorites();
-    }, []);
-    
-    if(twitter) {
-        localTwitter =  <a href={`${twitter}`} className="button social twitter"> <i className="fa-brands fa-twitter" aria-hidden="true"></i> Twitter </a>
+
+    let likeText = "Like Venue"
+    if(likeActive){
+      likeText = "Venue Liked"
     }
-    if(facebook){
-        localFacebook = <a href={`${facebook}`}  className="button social facebook"> <i className="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook </a>
-    }
-    if(website){
-        localWeb = <a href={`${website}`}  className="button social website"> Website </a>
+      if (twitter) {
+          localTwitter =  <a href={`${twitter}`} className="button social twitter"> <i className="fa-brands fa-twitter" aria-hidden="true"></i> Twitter </a>
+      }
+      if (facebook) {
+          localFacebook = <a href={`${facebook}`}  className="button social facebook"> <i className="fa-brands fa-facebook-f" aria-hidden="true"></i> Facebook </a>
+      }
+      if (website) {
+          localWeb = <a href={`${website}`}  className="button social website"> Website </a>
     }
 
     const MapWithAMarker = withScriptjs(withGoogleMap(props =>
@@ -82,14 +89,14 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
              <h1 className='local-text'>{name}</h1>
             </div>
             <MapWithAMarker
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyACTxTtjv8zzjp5kgFi6lnu5Jx0VjRBJM0&v=3.exp&libraries=geometry,drawing,places"
-            loadingElement={<div style={{ height: `90%` }} />}
-            containerElement={<div style={{ height: `300px` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyACTxTtjv8zzjp5kgFi6lnu5Jx0VjRBJM0&v=3.exp&libraries=geometry,drawing,places"
+              loadingElement={<div style={{ height: `90%` }} />}
+              containerElement={<div style={{ height: `300px` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
             />
             <div className='grid-x grid-padding-x'>
                 <div className='medium-6 cell card'>
-                  <button className='button'>Favorite this local</button>
+                    <button onClick={addLike} className="button">{likeText}</button>
                     <h5 className="username">Description</h5>
                     <p>{bio}</p>
                     <h5 className="username">Address</h5>
