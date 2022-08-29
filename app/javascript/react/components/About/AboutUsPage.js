@@ -7,8 +7,8 @@ const AboutUsPage = (props) => {
                 <h1 className='about-text'>ABOUT US</h1>
             </div>
             <div className='grid-x grid-padding-x'>
-                <div className='medium-12 cell card'>
-                <div className='title-box'>
+                <div className='card'>
+                <div className='username'>
                         <h2>Hello! I'm Devin</h2>
                     </div>
                     <div className='info'>
@@ -19,8 +19,8 @@ const AboutUsPage = (props) => {
                     </div>
                     <a href='http://github.com/devinrojas' className='title-box'>My Github</a>
                 </div>
-                <div className='medium-12 cell card'>
-                    <div className='title-box'>
+                <div className='card'>
+                    <div className='username'>
                         <h2>Building Back the Offline Community</h2>
                     </div>
                     <p>Local Locator was built to make it more convenient for players of all type

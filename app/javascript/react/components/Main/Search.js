@@ -1,5 +1,7 @@
 import React from 'react';
+
 const Search = (props) => {
+  
     return (
       <div className='grid-container'>
           <div className='grid-x grid-padding-x'>
@@ -15,7 +17,7 @@ const Search = (props) => {
               <a href='/faq' ><p className='card-text'>FAQ</p></a>
             </div>
             <div className='your-profile card cell medium-5'>
-              <a href="" ><p className='card-text'>YOUR PROFILE</p></a>
+              <a href="/users/devinr" ><p className='card-text'>YOUR PROFILE</p></a>
             </div>
           </div>
       </div>
