@@ -99,7 +99,7 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
                     <button onClick={addLike} className="button social like"><i class="fa-solid fa-thumbs-up"></i> {likeText}</button>
                     <h5 className="username">DESCRIPTION</h5>
                     <p>{bio}</p>
-                    <h5 className="username">Address</h5>
+                    <h5 className="username">ADDRESS</h5>
                     <p>{address} | {city}, {state} {zip}</p>
                 </div>
                 <div className='medium-5 cell card'>
