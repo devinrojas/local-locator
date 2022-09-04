@@ -9,13 +9,6 @@ Rails.application.routes.draw do
   get '/locals/new', to: "homes#auth"
   get '/locals/:id', to: "homes#index"
   get '/users/:id', to: "homes#index"
-
-
-  # namespace :api do
-  #   namespace :v1 do 
-   
-  #   end
-  # end
   
   namespace :api do
     namespace :v1 do 
@@ -24,13 +17,9 @@ Rails.application.routes.draw do
       resources :users
 
       resources :locals do
+        resources :comments, only: [:create, :destroy]
         resources :likes, only: [:create, :index]
       end
     end
   end
-
-  # namespace :api do
-  #   namespace :v1 do 
-  #   end
-  # end
 end

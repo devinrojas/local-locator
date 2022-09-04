@@ -1,9 +1,10 @@
+import CommentForm from './CommentForm'
+import CommentTile from './CommentTile'
 import React, {useState, useEffect} from 'react'
 import LocalInfoSection from './LocalInfoSection'
 
 const LocalShowPage = (props) => {
     const [local, setLocal] = useState({})
-
     let localId = props.match.params.id
 
     const getLocal = async () => {
@@ -24,6 +25,20 @@ const LocalShowPage = (props) => {
       getLocal();
     }, []);
 
+    const commentTiles = local.comments?.map((comment)=>{
+      return(
+        <CommentTile
+          key={comment.id}
+          id={comment.id}
+          userAvatar={comment.user.avatar.url}
+          userHandle={comment.user.username}
+          commentUserId={comment.user_id}
+          body={comment.body}
+          createdAt={comment.created_at}
+        />
+      )  
+    })
+
     return ( 
       <div>
         <LocalInfoSection
@@ -40,7 +55,17 @@ const LocalShowPage = (props) => {
                 website={local.website}
                 zip={local.zip}
           />
+          <div>
+            <CommentForm 
+              setLocal={setLocal} 
+              local={local} 
+            />
+          </div>
+          <div>
+            {commentTiles}
+          </div>
       </div> 
+      
     );
 }
  
