@@ -7,6 +7,7 @@ class Local < ActiveRecord::Base
     validates :zip, presence: true
     validates :zip, numericality: true
     has_many :likes
+    has_many :comments
 
     extend FriendlyId
     friendly_id :name_slug, use: :slugged
@@ -14,9 +15,5 @@ class Local < ActiveRecord::Base
     def name_slug
           [:name]
     end
-
-    def total_favorites
-        self.favoties.sum(:favorite)
-      end
 
 end

@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, } from "react-google-maps";
 import Geocode from "react-geocode";
-import { faHelicopterSymbol } from '@fortawesome/free-solid-svg-icons';
+
 
 Geocode.setApiKey("AIzaSyACTxTtjv8zzjp5kgFi6lnu5Jx0VjRBJM0")
 
 const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebook, website, id}) => {
   const [likeActive, setLikeActive] = useState(false)
-  // const [likeText, setLikeText] = useState("Like This Venue")
   const [geolocation, setGeolocation] = useState({
         lat: 0,
         lng: 0
@@ -96,7 +95,7 @@ const LocalInfoSection = ({name, bio, address, city, state, zip, twitter, facebo
             />
             <div className='grid-x grid-padding-x'>
                 <div className='medium-6 cell card'>
-                    <button onClick={addLike} className="button social like"><i class="fa-solid fa-thumbs-up"></i> {likeText}</button>
+                    <button onClick={addLike} className="button social like"><i className="fa-solid fa-thumbs-up"></i> {likeText}</button>
                     <h5 className="username">DESCRIPTION</h5>
                     <p>{bio}</p>
                     <h5 className="username">ADDRESS</h5>
