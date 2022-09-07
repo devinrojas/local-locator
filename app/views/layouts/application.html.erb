@@ -70,6 +70,33 @@
   <%= yield %>
 
 
+
+  
+  <%= yield :extra_footer %>
+
+  <footer class="footer">
+    <div class="grid-x grid-padding-x">
+      <div class="medium-4 cell">
+        <p class="footer-text">Created by: Devin Rojas</p>
+        <p class="footer-text">Powered by: React/Rails</p>
+        <a href="https://github.com/devinrojas"><i class="fa-brands fa-github sign-text social-icon"></i></a>
+        <a href="https://www.linkedin.com/in/devinrojas/"><i class="fa-brands fa-linkedin sign-text social-icon"></i></a>
+      </div>
+
+      <div class="medium-4 cell">
+        <a class="sign-text" href="/about-us">About Us</a> <br/>
+        <a class="nav-text " href="/locals">All Locals</a> <br />
+        <a class="sign-text" href="/faq">Frequently Asked Questions</a>
+      </div>
+
+
+      <div class="medium-4 cell social-icon">
+        <a class="nav-text" href="/">Home</a> <br/>
+        <a class="sign-text" href="/locals/new">Submit A Local</a> <br/>
+      </div>
+    </div>    
+  </footer>
+
   <%= javascript_include_tag 'application' %>
   
   <%- if Rails.env.development? || Rails.env.test? -%> 
@@ -77,31 +104,10 @@
       window.railsEnv = '<%= Rails.env %>'
     <%- end -%>
   <%- end -%>
+
   <%= javascript_pack_tag 'application' %>
-  
-  <%= yield :extra_footer %>
+
 </body>
 
-<footer class="footer">
-  <div class="grid-x grid-padding-x">
-    <div class="medium-4 cell">
-      <p class="footer-text">Created by: Devin Rojas</p>
-      <p class="footer-text">Powered by: React/Rails</p>
-      <a href="https://github.com/devinrojas"><i class="fa-brands fa-github sign-text social-icon"></i></a>
-      <a href="https://www.linkedin.com/in/devinrojas/"><i class="fa-brands fa-linkedin sign-text social-icon"></i></a>
-    </div>
 
-    <div class="medium-4 cell">
-      <a class="sign-text" href="/about-us">About Us</a> <br/>
-      <a class="nav-text " href="/locals">All Locals</a> <br />
-      <a class="sign-text" href="/faq">Frequently Asked Questions</a>
-    </div>
-
-
-    <div class="medium-4 cell social-icon">
-      <a class="nav-text" href="/">Home</a> <br/>
-      <a class="sign-text" href="/locals/new">Submit A Local</a> <br/>
-    </div>
-  </div>    
-</footer>
 </html>
