@@ -1,4 +1,4 @@
-import ErrorList from "../errors/ErrorList"
+import ErrorList from "../Errors/ErrorList"
 import React, { useState } from 'react';
 import { Redirect } from "react-router-dom";
 
