@@ -74,7 +74,7 @@ box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
   margin: 10px;
   filter: grayscale(35%);
   -webkit-filter: grayscale(35%); 
-  background-image: asset-url("faq.png");
+  background-image: image-url("faq.png");
   background-size: cover;
   text-shadow: 0 0 3px black;
   -webkit-box-shadow: 0px 15px 14px -1px rgba(23,23,23,0.69); 
@@ -92,7 +92,7 @@ box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
 .local-tile, .welcome{
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%); 
-  background-image: asset-url("color.jpg");
+  background-image: image-url("color.jpg");
   background-size: cover;
   border-top: solid 2px #6DC0D5;
   border-bottom: solid 2px #6DC0D5;
@@ -118,10 +118,10 @@ box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
 }
 
 .form{
-  background-image: asset-url("form.jpg");
+  background-image: image-url("form.jpg");
 }
 .about{
-  background-image: asset-url("about.jpg");
+  background-image: image-url("about.jpg");
 }
 .local{
   height: 150px;
@@ -255,7 +255,7 @@ box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
 }
 
 .icon{
-  background-image: asset-url("logo.png");
+  background-image: image-url("logo.png");
 }
 
 .bio-text{
@@ -267,21 +267,21 @@ box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
 }
 
 .all-locals{
-  background-image: asset-url("sfv.jpg");
+  background-image: image-url("sfv.jpg");
   background-size: cover;
   margin-right: 70px;
 }
 .submit-local{
-  background-image: asset-url("soul.jpg");
+  background-image: image-url("soul.jpg");
   background-size: cover;
 }
 .faq-panel{
-  background-image: asset-url("kof.jpg");
+  background-image: image-url("kof.jpg");
   background-size: cover;
   margin-right: 70px;
 }
 .your-profile{
-  background-image: asset-url("mk11.jpg");
+  background-image: image-url("mk11.jpg");
   background-size: cover;
 }
 
@@ -302,7 +302,7 @@ box-shadow: 0px 0px 174px 0px rgba(226,133,19,0.9);
   border: 0.125rem solid #e28413;
   box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.18);
   border-radius: 0;
-  background-image: asset-url("https://image.ibb.co/i7NbrQ/search_icon_15.png");
+  background-image: image-url("https://image.ibb.co/i7NbrQ/search_icon_15.png");
   background-position: 0.625rem 0.625rem;
   background-repeat: no-repeat;
   padding: 0.75rem 1.25rem 0.75rem 2rem;
