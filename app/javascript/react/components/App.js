@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import FAQList from './FAQ/FAQlist'
-import LocalIndexPage from "./Locals/LocalIndexPage.js"
-import LocalShowPage from './Locals/LocalShowPage.js'
-import MainPage from './Main/MainPage.js'
-import NewLocalForm from './Locals/NewLocalForm.js'
-import AboutUsPage from './About/AboutUsPage.js'
-import UserPage from './Users/UserPage.js'
+import FAQList from './faq1/FAQlist'
+import LocalIndexPage from "./locals1/LocalIndexPage.js"
+import LocalShowPage from './locals1/LocalShowPage.js'
+import MainPage from './main1/MainPage.js'
+import NewLocalForm from './locals1/NewLocalForm.js'
+import AboutUsPage from './about1/AboutUsPage.js'
+import UserPage from './users1/UserPage.js'
 
 export const App = (props) => {
   return (
