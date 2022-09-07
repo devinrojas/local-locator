@@ -1,5 +1,5 @@
 import _ from "lodash"
-import ErrorList from "../errors1/ErrorList"
+import ErrorList from "../errors/ErrorList"
 import React, { useState } from "react"
 
 const CommentForm = (props) => {
