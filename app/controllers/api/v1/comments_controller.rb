@@ -4,9 +4,9 @@ class Api::V1::CommentsController < ApiController
     before_action :authorize_user, except: [:create]
     
     def create
-      comment = Comment.new(local_id: params[:local_id], user: current_user)
+      comment = Comment.new(comment_params)
       comment.local_id = params[:local_id]
-      comment.user_id = current_user[:id]
+      comment.user = current_user
   
       if comment.save
         render json: comment
@@ -26,6 +26,9 @@ class Api::V1::CommentsController < ApiController
     end
   
     private 
+    def comment_params
+      params.require(:comment).permit(:body)
+    end
   
     def authenticate_user
       if !user_signed_in?
