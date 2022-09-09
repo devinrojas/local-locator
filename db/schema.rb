@@ -18,9 +18,11 @@ ActiveRecord::Schema.define(version: 2022_08_31_203509) do
   create_table "comments", force: :cascade do |t|
     t.text "body", default: ""
     t.bigint "local_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["local_id"], name: "index_comments_on_local_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

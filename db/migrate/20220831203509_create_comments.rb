@@ -3,6 +3,7 @@ class CreateComments < ActiveRecord::Migration[5.2]
     create_table :comments do |t|
       t.text :body, default: ""
       t.belongs_to :local, null: false
+      t.belongs_to :user, null: false
       t.timestamps null: false
     end
   end
