@@ -1,5 +1,15 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+<<<<<<< HEAD
+import FAQList from './FAQ/FAQlist'
+import LocalIndexPage from "./Locals/LocalIndexPage"
+import LocalShowPage from './Locals/LocalShowPage'
+import MainPage from './Main/MainPage'
+import NewLocalForm from './Locals/NewLocalForm'
+import React from 'react'
+import AboutUsPage from './About/AboutUsPage'
+import UserPage from './Users/UserPage'
+=======
 
 import FAQList from './faq/FAQlist'
 import LocalIndexPage from "./locals/LocalIndexPage.js"
@@ -8,6 +18,7 @@ import MainPage from './main/MainPage.js'
 import NewLocalForm from './locals/NewLocalForm.js'
 import AboutUsPage from './about/AboutUsPage.js'
 import UserPage from './users/UserPage.js'
+>>>>>>> main
 
 export const App = (props) => {
   return (
