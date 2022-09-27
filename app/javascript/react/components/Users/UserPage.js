@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import _ from "lodash";
-import LocalTile from "../locals/LocalTile";
+import LocalTile from "../Locals/LocalTile";
 
 const UserPage = (props) => {
     const [user, setUser] = useState({})
