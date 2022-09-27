@@ -1,6 +1,9 @@
 {
   "name": "local-locator",
   "private": true,
+  "engines": {
+    "yarn": ">=0.25.2"
+  },
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
